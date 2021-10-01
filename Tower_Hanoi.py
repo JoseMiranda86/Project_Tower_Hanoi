@@ -99,4 +99,19 @@ while True:
                     New = int(17 - ((B1s-1)/2))* " " + element
                     Newest_State.append(New)
                     C1s = len(element)  
-    
+
+# Def function to print latest state of grid
+    def TowerState(A1, A2, A3, A4, A5, B1, B2, B3, B4, B5, C1, C2, C3, C4, C5) :
+        print("             A                 B                 C\n")
+        print("1-"+A1+B1+C1)
+        print("2-"+A2+B2+C2)
+        print("3-"+A3+B3+C3)
+        print("4-"+A4+B4+C4)
+        print("5-"+A5+B5+C5+"\n\n")
+
+    def positions():
+        position(Line1)
+        position(Line2)
+        position(Line3)
+        position(Line4)
+        position(Line5)    
