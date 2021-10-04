@@ -140,4 +140,56 @@ while True:
         else:
             break
 
-   
+    print("\n")
+
+    for i in [1, 2, 3, 4, 5]:
+        count = i
+        n = data[dataOri+str(i)]
+        if count < 5 and len(n) > 1:
+            var1 = n
+            keyO = dataOri+str(i)
+            break
+        elif len(n) > 1:
+            var1 = n
+            keyO = dataOri+str(i)
+            break
+        else:
+            var1 = "s"
+            keyO = dataOri+str(i)
+
+    for i in [1, 2, 3, 4, 5]:
+        count = i
+        m = data[dataOri+str(i)]
+        if count < 5 and len(m) > 1:
+            var2 = m
+            keyD = dataOri+str(i)
+            keyD2 = dataOri+str(i-1)
+            break
+        elif len(m) > 1:
+            var2 = m
+            keyD = dataOri+str(i)
+            keyD2 = dataOri+str(i-1)
+            break
+        else:
+            var2 = "s"
+            keyD = dataOri+str(i)
+            keyD2 = dataOri+str(i-1)
+
+    if len(var2) == 1:
+        newvalue1 = data[keyO]
+        newvalue2 = data[keyD]
+        data[keyO] = newvalue2
+        data[keyD] = newvalue1
+        count1 = count1 + 1
+
+    elif len(var2) > len(var1) and len(var2) > 1:
+        newvalue1 = data[keyO]
+        newvalue2 = data[keyD2]
+        data[keyO] = newvalue2
+        data[keyD2] = newvalue1
+        count1 = count1 + 1
+
+    else:
+        print("\n\nCAN'T MOVE!!!!!\nThe size of the disk at the origin is bigger than the one at the destination! \n\n\n")
+        count1 = count1 + 1
+        continue   
