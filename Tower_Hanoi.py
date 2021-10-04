@@ -140,19 +140,4 @@ while True:
         else:
             break
 
-    print("\n")
-
-    for i in [1, 2, 3, 4, 5]:
-        count = i
-        n = data[dataOri+str(i)]
-        if count < 5 and len(n) > 1:
-            var1 = n
-            keyO = dataOri+str(i)
-            break
-        elif len(n) > 1:
-            var1 = n
-            keyO = dataOri+str(i)
-            break
-        else:
-            var1 = "s"
-            keyO = dataOri+str(i)
+   
