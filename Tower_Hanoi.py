@@ -1,6 +1,7 @@
 print("\n\n\n\nWelcome to the game of the Tower of Hanoi! \n\n\n")
 
 Counter_rounds = 0
+min = (2**4)-1
 
 # Defining the inial state of the grid
 data = {'A1':"s", 'A2':"000", 'A3':"00000",
@@ -20,7 +21,7 @@ while True:
     Line4 = [data['A4'], data['B4'], data['C4']]
     Line5 = [data['A5'], data['B5'], data['C5']]
 
- # Def of function that will define the position of the elements
+ # Function that will define the position of the elements
 
     def position(n):
         count = 0
@@ -123,10 +124,10 @@ while True:
     TowerState(Newest_State[0], Newest_State[3], Newest_State[6], Newest_State[9], Newest_State[12], Newest_State[1], Newest_State[4], Newest_State[7], Newest_State[10], Newest_State[13], Newest_State[2], Newest_State[5], Newest_State[8], Newest_State[11], Newest_State[14])
 
     if len(data['B5']) > len(data['B4']) and len(data['B4']) > len(data['B3']) and len(data['B3']) > len(data['B2']) and len(data['B2']) > len(data['B1']):
-        print("\n\n\n\n\n\n    CONGRATULATIONS!!!\n  YOU SOLVED THE PUZZLE!\n\n\n\nYou solved the puzzle in "+str(count1)+" moves\n\nThe min number of moves for this puzzle is "+str(min)+"\n\n\n\n")
+        print("\n\n\n\n\n\n    CONGRATULATIONS!!!\n  YOU SOLVED THE PUZZLE!\n\n\n\nYou solved the puzzle in "+str(Counter_rounds)+" moves\n\nThe min number of moves for this puzzle is "+str(min)+"\n\n\n\n")
         break
     elif len(data['C5']) > len(data['C4']) and len(data['C4']) > len(data['C3']) and len(data['C3']) > len(data['C2']) and len(data['C2']) > len(data['C1']):
-        print("\n\n\n\n\n\n    CONGRATULATIONS!!!\n  YOU SOLVED THE PUZZLE!\n\n\n\nYou solved the puzzle in "+str(count1)+" moves\n\nThe min number of moves for this puzzle is "+str(min)+"\n\n\n\n")
+        print("\n\n\n\n\n\n    CONGRATULATIONS!!!\n  YOU SOLVED THE PUZZLE!\n\n\n\nYou solved the puzzle in "+str(Counter_rounds)+" moves\n\nThe min number of moves for this puzzle is "+str(min)+"\n\n\n\n")
         break
     else:
         x = 1
@@ -136,6 +137,20 @@ while True:
         dataOri = level.upper()
         if dataOri != "A" and dataOri != "B" and dataOri != "C":
             print("\nPlease choose a valid column\n\n")
+            continue
+        else:
+            break
+
+    print("\n")
+
+    while True:
+        Newlevel = input("Choose the column destination: ")
+        dataDes = Newlevel.upper()
+        if dataDes != "A" and dataDes != "B" and dataDes != "C":
+            print("\nPlease choose a valid column\n\n")
+            continue
+        elif dataDes == dataOri:
+            print("\nPlease choose a different column for the destination\n\n")
             continue
         else:
             break
@@ -159,37 +174,37 @@ while True:
 
     for i in [1, 2, 3, 4, 5]:
         count = i
-        m = data[dataOri+str(i)]
+        m = data[dataDes+str(i)]
         if count < 5 and len(m) > 1:
             var2 = m
-            keyD = dataOri+str(i)
-            keyD2 = dataOri+str(i-1)
+            keyD = dataDes+str(i)
+            keyD2 = dataDes+str(i-1)
             break
         elif len(m) > 1:
             var2 = m
-            keyD = dataOri+str(i)
-            keyD2 = dataOri+str(i-1)
+            keyD = dataDes+str(i)
+            keyD2 = dataDes+str(i-1)
             break
         else:
             var2 = "s"
-            keyD = dataOri+str(i)
-            keyD2 = dataOri+str(i-1)
+            keyD = dataDes+str(i)
+            keyD2 = dataDes+str(i-1)
 
     if len(var2) == 1:
         newvalue1 = data[keyO]
         newvalue2 = data[keyD]
         data[keyO] = newvalue2
         data[keyD] = newvalue1
-        count1 = count1 + 1
+        Counter_rounds = Counter_rounds + 1
 
     elif len(var2) > len(var1) and len(var2) > 1:
         newvalue1 = data[keyO]
         newvalue2 = data[keyD2]
         data[keyO] = newvalue2
         data[keyD2] = newvalue1
-        count1 = count1 + 1
+        Counter_rounds = Counter_rounds + 1
 
     else:
         print("\n\nCAN'T MOVE!!!!!\nThe size of the disk at the origin is bigger than the one at the destination! \n\n\n")
-        count1 = count1 + 1
+        Counter_rounds = Counter_rounds + 1
         continue   
