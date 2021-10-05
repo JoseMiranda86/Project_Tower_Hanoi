@@ -1,3 +1,7 @@
+import os
+
+clear = lambda: os.system('cls')
+
 print("\n\n\n\nWelcome to the game of the Tower of Hanoi! \n\n\n")
 
 Counter_rounds = 0
@@ -154,6 +158,8 @@ while True:
             continue
         else:
             break
+
+    clear()        
 
     print("\n")
 
