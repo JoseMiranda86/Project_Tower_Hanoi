@@ -19,11 +19,7 @@ while True:
 # Definition of list that will contain the most recent state
     Newest_State= list()
 # Definition of each line of the grid as a list of values    
-    Line1 = [data['A1'], data['B1'], data['C1']]
-    Line2 = [data['A2'], data['B2'], data['C2']]
-    Line3 = [data['A3'], data['B3'], data['C3']]
-    Line4 = [data['A4'], data['B4'], data['C4']]
-    Line5 = [data['A5'], data['B5'], data['C5']]
+
 
  # Function that will define the position of the elements
 
@@ -121,7 +117,7 @@ while True:
         position(Line4)
         position(Line5)    
 
-# Checking status of grid
+# Checking status of grid.Calling function to define new positions
 
 
     positions()
