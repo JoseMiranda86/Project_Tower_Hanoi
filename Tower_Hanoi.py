@@ -121,7 +121,7 @@ while True:
         position(Line4)
         position(Line5)    
 
-# Checking status of grid
+# Checking status of grid.Calling function to define new positions
 
 
     positions()
