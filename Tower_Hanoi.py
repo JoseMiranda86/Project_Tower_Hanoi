@@ -31,79 +31,47 @@ while True:
         count = 0
         for element in n:
             if count == 0:
+                A1s = len(element)
+                count = 1
                 if len(element) == 9:
                     New = " "*7 + element
-                    Newest_State.append(New)
-                    A1s = len(element)
-                    count = 1
                 elif len(element) == 7:
                     New = " "*8 + element
-                    Newest_State.append(New)
-                    A1s = len(element)
-                    count = 1
                 elif len(element) == 5:
                     New = " "*9 + element
-                    Newest_State.append(New)
-                    A1s = len(element)
-                    count = 1
                 elif len(element) == 3:
                     New = " "*10 + element
-                    Newest_State.append(New)
-                    A1s = len(element)
-                    count = 1
                 else:
                     New = " "*11 + element
-                    Newest_State.append(New)
-                    A1s = len(element)
-                    count = 1
+                Newest_State.append(New)
 
             elif count == 1:
+                B1s = len(element)
+                count = 2
                 if len(element) == 9:
                     New = int(13 - ((A1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    B1s = len(element)
-                    count = 2
                 elif len(element) == 7:
                     New = int(14 - ((A1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    B1s = len(element)
-                    count = 2
                 elif len(element) == 5:
                     New = int(15 - ((A1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    B1s = len(element)
-                    count = 2
                 elif len(element) == 3:
                     New = int(16 - ((A1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    B1s = len(element)
-                    count = 2
                 else:
                     New = int(17 - ((A1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    B1s = len(element)
-                    count = 2
+                Newest_State.append(New)
             else:
+                C1s = len(element)
                 if len(element) == 9:
                     New = int(13 - ((B1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    C1s = len(element)
                 elif len(element) == 7:
                     New = int(14 - ((B1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    C1s = len(element)
                 elif len(element) == 5:
                     New = int(15 - ((B1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    C1s = len(element)
                 elif len(element) == 3:
                     New = int(16 - ((B1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    C1s = len(element)
                 else:
-                    New = int(17 - ((B1s-1)/2))* " " + element
-                    Newest_State.append(New)
-                    C1s = len(element)  
+                    New = int(17 - ((B1s-1)/2))* " " + element  
+                Newest_State.append(New)
 
 # Def function to print latest state of grid
     def TowerState(A1, A2, A3, A4, A5, B1, B2, B3, B4, B5, C1, C2, C3, C4, C5) :
