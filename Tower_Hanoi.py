@@ -32,7 +32,7 @@ while True:
         for element in n:
             if count == 0:
                 if len(element) == 9:
-                    New = " "*5 + element
+                    New = " "*7 + element
                     Newest_State.append(New)
                     A1s = len(element)
                     count = 1
