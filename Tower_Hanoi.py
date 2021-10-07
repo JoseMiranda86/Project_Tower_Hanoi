@@ -32,27 +32,27 @@ while True:
         for element in n:
             if count == 0:
                 if len(element) == 9:
-                    New = "       " + element
+                    New = " "*5 + element
                     Newest_State.append(New)
                     A1s = len(element)
                     count = 1
                 elif len(element) == 7:
-                    New = "        " + element
+                    New = " "*8 + element
                     Newest_State.append(New)
                     A1s = len(element)
                     count = 1
                 elif len(element) == 5:
-                    New = "         " + element
+                    New = " "*9 + element
                     Newest_State.append(New)
                     A1s = len(element)
                     count = 1
                 elif len(element) == 3:
-                    New = "          " + element
+                    New = " "*10 + element
                     Newest_State.append(New)
                     A1s = len(element)
                     count = 1
                 else:
-                    New = "           " + element
+                    New = " "*11 + element
                     Newest_State.append(New)
                     A1s = len(element)
                     count = 1
