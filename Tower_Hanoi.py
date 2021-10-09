@@ -101,8 +101,6 @@ while True:
     elif len(data['C5']) > len(data['C4']) and len(data['C4']) > len(data['C3']) and len(data['C3']) > len(data['C2']) and len(data['C2']) > len(data['C1']):
         print("\n\n\n\n\n\n    CONGRATULATIONS!!!\n  YOU SOLVED THE PUZZLE!\n\n\n\nYou solved the puzzle in "+str(Counter_rounds)+" moves\n\nThe min number of moves for this puzzle is "+str(min)+"\n\n\n\n")
         break
-    else:
-        x = 1
 
     while True:
         level= input("Choose the column origin: ")
