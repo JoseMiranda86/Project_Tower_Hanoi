@@ -83,11 +83,15 @@ while True:
         print("5-"+A5+B5+C5+"\n\n")
 
     def positions():
-        position(Line1)
-        position(Line2)
-        position(Line3)
-        position(Line4)
-        position(Line5)    
+        Lines = [Line1, Line2, Line3, Line4, Line5]
+        for L in Lines:
+            position(L)
+
+        # position(Line1)
+        # position(Line2)
+        # position(Line3)
+        # position(Line4)
+        # position(Line5)    
 
 # Checking status of grid.Calling function to define new positions
 
