@@ -95,7 +95,6 @@ while True:
 
 # Checking status of grid.Calling function to define new positions
 
-
     positions()
     TowerState(Newest_State[0], Newest_State[3], Newest_State[6], Newest_State[9], Newest_State[12], Newest_State[1], Newest_State[4], Newest_State[7], Newest_State[10], Newest_State[13], Newest_State[2], Newest_State[5], Newest_State[8], Newest_State[11], Newest_State[14])
 
@@ -136,7 +135,7 @@ while True:
     for i in [1, 2, 3, 4, 5]:
         count = i
         n = data[dataOri+str(i)]
-        keyO = dataOri+str(i)
+        KeyOrigin = dataOri+str(i)
         if count < 5 and len(n) > 1:
             var1 = n
             break
@@ -149,8 +148,8 @@ while True:
     for i in [1, 2, 3, 4, 5]:
         count = i
         m = data[dataDes+str(i)]
-        keyD = dataDes+str(i)
-        keyD2 = dataDes+str(i-1)
+        KeyDestination = dataDes+str(i)
+        KeyDestination2 = dataDes+str(i-1)
         if count < 5 and len(m) > 1:
             var2 = m
             break
@@ -160,16 +159,16 @@ while True:
         else:
             var2 = "s"
 
-    newvalue1 = data[keyO]
+    newvalue1 = data[KeyOrigin]
     if len(var2) == 1:
-        newvalue2 = data[keyD]
-        data[keyO] = newvalue2
-        data[keyD] = newvalue1
+        newvalue2 = data[KeyDestination]
+        data[KeyOrigin] = newvalue2
+        data[KeyDestination] = newvalue1
 
     elif len(var2) > len(var1) and len(var2) > 1:
-        newvalue2 = data[keyD2]
-        data[keyO] = newvalue2
-        data[keyD2] = newvalue1
+        newvalue2 = data[KeyDestination2]
+        data[KeyOrigin] = newvalue2
+        data[KeyDestination2] = newvalue1
 
     else:
         print("\n\nCAN'T MOVE!!!!!\nThe size of the disk at the origin is bigger than the one at the destination! \n\n\n")
