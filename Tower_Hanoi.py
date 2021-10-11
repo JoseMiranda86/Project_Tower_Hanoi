@@ -8,11 +8,11 @@ Counter_rounds = 0
 min = (2**4)-1
 
 # Defining the inial state of the grid
-data = {'A1':"s", 'A2':"000", 'A3':"00000",
-        'A4':"0000000", 'A5':"000000000",
-        'B1':"s", 'B2':"s", 'B3':"s", 'B4':"s",
-        'B5':"s", 'C1':"s", 'C2':"s", 'C3':"s",
-        'C4':"s", 'C5':"s"}
+data = {'A1':"o", 'A2':"xxx", 'A3':"xxxxx",
+        'A4':"xxxxxxx", 'A5':"xxxxxxxxx",
+        'B1':"o", 'B2':"o", 'B3':"o", 'B4':"o",
+        'B5':"o", 'C1':"o", 'C2':"o", 'C3':"o",
+        'C4':"o", 'C5':"o"}
 
 # Start loop of game
 while True:
@@ -143,7 +143,7 @@ while True:
             var1 = n
             break
         else:
-            var1 = "s"
+            var1 = "o"
 
     for i in [1, 2, 3, 4, 5]:
         count = i
@@ -157,7 +157,7 @@ while True:
             var2 = m
             break
         else:
-            var2 = "s"
+            var2 = "o"
 
     newvalue1 = data[KeyOrigin]
     if len(var2) == 1:
