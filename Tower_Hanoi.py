@@ -2,7 +2,7 @@ import os
 
 clear = lambda: os.system('cls')
 
-print("\n\n\n\nWelcome to the game of the Tower of Hanoi! \n\n\n")
+print("\n\n\n\nWelcome to the game of the Tower of Hanoi \n\n\n")
 
 Counter_rounds = 0
 min = (2**4)-1
@@ -137,13 +137,13 @@ while True:
         n = data[dataOri+str(i)]
         KeyOrigin = dataOri+str(i)
         if count < 5 and len(n) > 1:
-            var1 = n
+            variable1 = n
             break
         elif len(n) > 1:
-            var1 = n
+            variable1 = n
             break
         else:
-            var1 = "o"
+            variable1 = "o"
 
     for i in [1, 2, 3, 4, 5]:
         count = i
@@ -151,21 +151,21 @@ while True:
         KeyDestination = dataDes+str(i)
         KeyDestination2 = dataDes+str(i-1)
         if count < 5 and len(m) > 1:
-            var2 = m
+            variable2 = m
             break
         elif len(m) > 1:
-            var2 = m
+            variable2 = m
             break
         else:
-            var2 = "o"
+            variable2 = "o"
 
     newvalue1 = data[KeyOrigin]
-    if len(var2) == 1:
+    if len(variable2) == 1:
         newvalue2 = data[KeyDestination]
         data[KeyOrigin] = newvalue2
         data[KeyDestination] = newvalue1
 
-    elif len(var2) > len(var1) and len(var2) > 1:
+    elif len(variable2) > len(variable1) and len(variable2) > 1:
         newvalue2 = data[KeyDestination2]
         data[KeyOrigin] = newvalue2
         data[KeyDestination2] = newvalue1
