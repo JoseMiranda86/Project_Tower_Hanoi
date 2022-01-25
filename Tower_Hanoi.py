@@ -25,7 +25,7 @@ while True:
     Line4 = [data['A4'], data['B4'], data['C4']]
     Line5 = [data['A5'], data['B5'], data['C5']]
 
- # Function that will define the position of the elements
+# Function that will define the position of the elements
 
     def position(n):
         count = 0
@@ -86,12 +86,7 @@ while True:
         Lines = [Line1, Line2, Line3, Line4, Line5]
         for L in Lines:
             position(L)
-
-        # position(Line1)
-        # position(Line2)
-        # position(Line3)
-        # position(Line4)
-        # position(Line5)    
+ 
 
 # Checking status of grid.Calling function to define new positions
 
